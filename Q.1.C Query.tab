@@ -1,0 +1,8 @@
+# the file is saved as query.sql
+USE Compboil
+SELECT a.function_1, e.expr_value
+FROM annotaion AS a LEFT JOIN expression AS e a.gene=e.gene
+WHERE e.expr_value< 5000
+AND  metabolism
+  regexp '(Purine|Pyrimidine) biosynthesis';
+
